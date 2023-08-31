@@ -2,6 +2,7 @@ import React from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SearchScreen from './src/screens/SearchScreen';
+import BusinessShowScreen from './src/screens/BusinessShowScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,11 @@ const App = () => {
         <Stack.Screen
           name="Search"
           component={SearchScreen}
-          options={{title: "Business Search"}}/>
+          />
+        <Stack.Screen
+          name="Business"
+          component={BusinessShowScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
